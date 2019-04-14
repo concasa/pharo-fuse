@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 FUSEReadlink class >> fnSpec [
-	^ #(int (*) (const char *, char *, size_t))
+	^ #(int  (const char *, char *, size_t))
 ]
