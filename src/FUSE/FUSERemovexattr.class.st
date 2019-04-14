@@ -1,10 +1,10 @@
 Class {
-	#name : #FUSEReadlink,
+	#name : #FUSERemovexattr,
 	#superclass : #FUSECCallback,
 	#category : #'FUSE-FFI-Callbacks'
 }
 
 { #category : #'callback spec' }
-FUSEReadlink class >> fnSpec [
-	^ #(int  (const char *, char *, size_t))
+FUSERemovexattr class >> fnSpec [
+	^ #(int  (const char *, const char *))
 ]

@@ -1,10 +1,10 @@
 Class {
-	#name : #FUSEReadlink,
+	#name : #FUSEReleasedir,
 	#superclass : #FUSECCallback,
 	#category : #'FUSE-FFI-Callbacks'
 }
 
 { #category : #'callback spec' }
-FUSEReadlink class >> fnSpec [
-	^ #(int  (const char *, char *, size_t))
+FUSEReleasedir class >> fnSpec [
+	^ #(int  (const char *, struct fuse_file_info *))
 ]
