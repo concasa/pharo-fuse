@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #baselines }
-BaselineOfFUSE class >> baseline: spec [
+BaselineOfFUSE >> baseline: spec [
 	<baseline>
 	spec
 		for: #common
@@ -19,5 +19,5 @@ BaselineOfFUSE class >> baseline: spec [
 		group: 'default' with: #('UFFI');
 		group: 'UFFI' with: #('FUSE');
 		group: 'Tests' with: #('FUSE-Tests');
-		group: 'All' with: #('UFFI' 'Tests')
+		group: 'All' with: #('UFFI' 'Tests').
 ]
