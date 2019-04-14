@@ -12,13 +12,12 @@ BaselineOfFUSE class >> baseline: spec [
 		do: [ "Packages"
 			spec
 				package: 'FUSE';
-				package: 'FUSE-Tests' with: [ spec requires: #('FUSE') ];
-				package: 'Concasa-Examples' with: [ spec requires: #('FUSE') ] ].
+				package: 'FUSE-Tests' with: [ spec requires: #('FUSE') ] ].
 
 	"Groups"
 	spec
-		group: 'default' with: #('Model' 'Gui');
+		group: 'default' with: #('UFFI');
 		group: 'UFFI' with: #('FUSE');
-		group: 'Tests' with: #('Concasa-Tests' 'Concasa-Examples');
+		group: 'Tests' with: #('FUSE-Tests');
 		group: 'All' with: #('UFFI' 'Tests')
 ]
