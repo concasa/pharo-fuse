@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 FUSEReadlink class >> fnSpec [
-	^ #(42)
+	^ #(43)
 ]
