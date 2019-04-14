@@ -1,7 +1,7 @@
 Class {
 	#name : #UFFISnippets,
 	#superclass : #Object,
-	#category : #'LibFuse-Tests'
+	#category : #'LibFuse-Tests-Examples'
 }
 
 { #category : #accessing }

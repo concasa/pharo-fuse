@@ -1,11 +1,11 @@
 Class {
-	#name : #FUSEContext,
+	#name : #LFuseContext,
 	#superclass : #FFIExternalStructure,
 	#category : #'LibFuse-Core-FFI-Structs'
 }
 
 { #category : #'field definition' }
-FUSEContext class >> fieldsDesc [
+LFuseContext class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
 	struct fuse *fuse;
