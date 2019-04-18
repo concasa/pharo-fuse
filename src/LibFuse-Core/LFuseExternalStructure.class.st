@@ -1,18 +1,10 @@
 Class {
 	#name : #LFuseExternalStructure,
 	#superclass : #FFIExternalStructure,
-	#traits : 'TLFuseCalloutTrait',
-	#classTraits : 'TLFuseCalloutTrait classTrait',
+	#traits : 'TLFuseCalloutTrait + TLFusePrintingTrait',
+	#classTraits : 'TLFuseCalloutTrait classTrait + TLFusePrintingTrait classTrait',
 	#category : #'LibFuse-Core-Abstract'
 }
-
-{ #category : #'initialize-release' }
-LFuseExternalStructure >> free [
-	(handle isExternalAddress and: [ handle isNull ])
-		ifTrue: [ 
-			self class finalizeResourceData: handle.
-			self assert: handle isNull ]
-]
 
 { #category : #testing }
 LFuseExternalStructure >> isExternal [
