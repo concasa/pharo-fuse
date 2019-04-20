@@ -8,11 +8,11 @@ Class {
 LFuseFuseContext class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
-	struct fuse *fuse;
-	uid_t uid;
-	gid_t gid;
-	pid_t pid;
-	void *private_data;
-	mode_t umask;
+	LF_Fuse *fuse;
+	LF_Uid_T uid;
+	LF_Gid_T gid;
+	LF_Pid_T pid;
+	void* private_data;
+	LT_Mode_T umask;
 	)
 ]

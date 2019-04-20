@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 FUSEGetAttr class >> fnSpec [
-	^ #(int (void **out, LGitDiffFile *file, char *buf, size_t buflen, void *payload))
+	^ #(int (*fgetattr) (const char *, struct stat *, struct fuse_file_info *))
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #FUSEOperations,
 	#superclass : #FFIExternalStructure,
-	#category : #'LibFuse-Core-FFI-Structs'
+	#category : #'LibFuse-Core-FFI-Callbacks'
 }
 
 { #category : #'field definition' }
