@@ -2,16 +2,11 @@ Class {
 	#name : #LFuseFuseFileInfo,
 	#superclass : #FFIExternalStructure,
 	#classVars : [
-		'OFFSET_DIRECT_IO',
 		'OFFSET_EXTRA_FLAGS',
 		'OFFSET_FH',
 		'OFFSET_FH_OLD',
 		'OFFSET_FLAGS',
-		'OFFSET_FLOCK_RELEASE',
-		'OFFSET_FLUSH',
-		'OFFSET_KEEP_CACHE',
 		'OFFSET_LOCK_OWNER',
-		'OFFSET_NONSEEKABLE',
 		'OFFSET_WRITEPAGE'
 	],
 	#pools : [
@@ -35,27 +30,18 @@ LFuseFuseFileInfo class >> fieldsDesc [
 	'uint32' extra_flags;
  
 	'uint64' fh;
- 	'uint64' lock_owner;
-	
- 	'uint' direct_io;
- 	'uint' keep_cache; 
- 	'uint' flush;
- 	'uint' nonseekable;
- 	'uint' flock_release;
- 
+ 	'uint64' lock_owner;	
 	)
 ]
 
 { #category : #'access options' }
-LFuseFuseFileInfo >> direct_io [
-	"This method was automatically generated"
-	^handle unsignedLongAt: OFFSET_DIRECT_IO
+LFuseFuseFileInfo >> direct_io [	
+	^ self extra_flags bitAt: 32
 ]
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> direct_io: anObject [
-	"This method was automatically generated"
-	handle unsignedLongAt: OFFSET_DIRECT_IO put: anObject
+	^ self extra_flags bitAt: 32 put: anObject 
 ]
 
 { #category : #'accessing structure variables' }
@@ -108,38 +94,32 @@ LFuseFuseFileInfo >> flags: anObject [
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> flock_release [
-	"This method was automatically generated"
-	^handle unsignedLongAt: OFFSET_FLOCK_RELEASE
+	^ self extra_flags bitAt: 28
 ]
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> flock_release: anObject [
-	"This method was automatically generated"
-	handle unsignedLongAt: OFFSET_FLOCK_RELEASE put: anObject
+	^ self extra_flags bitAt: 28 put: anObject 
 ]
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> flush [
-	"This method was automatically generated"
-	^handle unsignedLongAt: OFFSET_FLUSH
+	^ self extra_flags bitAt: 30
 ]
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> flush: anObject [
-	"This method was automatically generated"
-	handle unsignedLongAt: OFFSET_FLUSH put: anObject
+	^ self extra_flags bitAt: 30 put: anObject 
 ]
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> keep_cache [
-	"This method was automatically generated"
-	^handle unsignedLongAt: OFFSET_KEEP_CACHE
+	^ self extra_flags bitAt: 31
 ]
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> keep_cache: anObject [
-	"This method was automatically generated"
-	handle unsignedLongAt: OFFSET_KEEP_CACHE put: anObject
+	^ self extra_flags bitAt: 31 put: anObject 
 ]
 
 { #category : #'accessing structure variables' }
@@ -156,14 +136,12 @@ LFuseFuseFileInfo >> lock_owner: anObject [
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> nonseekable [
-	"This method was automatically generated"
-	^handle unsignedLongAt: OFFSET_NONSEEKABLE
+	^ self extra_flags bitAt: 29
 ]
 
 { #category : #'access options' }
 LFuseFuseFileInfo >> nonseekable: anObject [
-	"This method was automatically generated"
-	handle unsignedLongAt: OFFSET_NONSEEKABLE put: anObject
+	^ self extra_flags bitAt: 29 put: anObject 
 ]
 
 { #category : #'accessing structure variables' }
