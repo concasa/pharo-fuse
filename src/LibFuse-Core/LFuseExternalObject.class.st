@@ -6,6 +6,12 @@ Class {
 	#category : #'LibFuse-Core-Abstract'
 }
 
+{ #category : #resources }
+LFuseExternalObject class >> ffiLibrary [
+
+	^LFuseFFILibrary  
+]
+
 { #category : #'instance creation' }
 LFuseExternalObject class >> fromHandle: aHandle [
 	^self basicNew setHandle: aHandle

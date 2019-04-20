@@ -6,6 +6,12 @@ Class {
 	#category : #'LibFuse-Core-Abstract'
 }
 
+{ #category : #resources }
+LFuseExternalStructure class >> ffiLibrary [
+
+	^LFuseFFILibrary  
+]
+
 { #category : #testing }
 LFuseExternalStructure >> isExternal [
 	"answer true if data referenced by receiver located in external heap, or just in object memory "

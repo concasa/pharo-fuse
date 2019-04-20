@@ -21,7 +21,7 @@ TLFuseCalloutTrait classSide >> call: fnSpec options: options [
 { #category : #resources }
 TLFuseCalloutTrait classSide >> ffiLibrary [
 
-	^LFuseLibrary  
+	^LFuseFFILibrary  
 ]
 
 { #category : #'library path' }

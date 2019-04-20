@@ -1,6 +1,9 @@
 Class {
 	#name : #BaselineOfLibFuse,
 	#superclass : #BaselineOf,
+	#classVars : [
+		'Initialized'
+	],
 	#category : #BaselineOfLibFuse
 }
 
@@ -21,4 +24,16 @@ BaselineOfLibFuse >> baseline: spec [
 			spec 
 				group: 'development' with: #('default' 'LibFuse-Tests').
 		]
+]
+
+{ #category : #actions }
+BaselineOfLibFuse >> postload: loader package: packageSpec [
+
+	"Ignore pre and post loads if already executed"
+	Initialized = true ifTrue: [ ^ self ].
+	
+	#('LFuseTypes' 'LFuseFFILibrary' 
+	) do: [ :each | (Smalltalk globals at: each) initialize. ].
+	
+	Initialized := true.
 ]

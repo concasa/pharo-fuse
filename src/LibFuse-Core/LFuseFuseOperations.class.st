@@ -1,11 +1,14 @@
 Class {
-	#name : #FUSEOperations,
+	#name : #LFuseFuseOperations,
 	#superclass : #FFIExternalStructure,
-	#category : #'LibFuse-Core-FFI-Callbacks'
+	#pools : [
+		'LFuseTypes'
+	],
+	#category : #'LibFuse-Core-FFI-Structs'
 }
 
 { #category : #'field definition' }
-FUSEOperations class >> fieldsDesc [
+LFuseFuseOperations class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
 	int (*getattr) (const char *, struct stat *);

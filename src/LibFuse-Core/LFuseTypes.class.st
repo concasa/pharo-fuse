@@ -16,6 +16,7 @@ Class {
 		'LF_Fuse',
 		'LF_Fuse_Context',
 		'LF_Fuse_File_Info',
+		'LF_Fuse_Operations',
 		'LF_Mode_T'
 	],
 	#category : #'LibFuse-Core-FFI-Structs'
@@ -39,6 +40,7 @@ LFuseTypes class >> initialize [
 	LF_C_Uid_T := 'uint'.
 	LF_Mode_T := 'uint'.
 	LF_Fuse_File_Info := LFuseFuseFileInfo.
+	LF_Fuse_Operations := LFuseFuseOperations.
 	"LF_ := LFuse" 
 	"LF_ := LFuse"
 	"LF_ := LFuse"

@@ -1,6 +1,9 @@
 Class {
 	#name : #LFuseFuseFileInfo,
 	#superclass : #FFIExternalStructure,
+	#pools : [
+		'LFuseTypes'
+	],
 	#category : #'LibFuse-Core-FFI-Structs'
 }
 
@@ -11,7 +14,7 @@ LFuseFuseFileInfo class >> fieldsDesc [
  	'ulong' fh_old;
  	'int' writepage;
  	'uint' direct_io : 1;
- 	'uint' keep_cache : 1;
+ 	'uint' keep_cache : 1; 
  	'uint' flush : 1;
  	'uint' nonseekable : 1;
  	'uint' flock_release : 1;

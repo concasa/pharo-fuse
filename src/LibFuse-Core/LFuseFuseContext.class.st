@@ -1,6 +1,9 @@
 Class {
 	#name : #LFuseFuseContext,
 	#superclass : #FFIExternalStructure,
+	#pools : [
+		'LFuseTypes'
+	],
 	#category : #'LibFuse-Core-FFI-Structs'
 }
 

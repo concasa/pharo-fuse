@@ -1,5 +1,5 @@
 Class {
 	#name : #FUSEPassthrough,
-	#superclass : #LFuseOperations,
+	#superclass : #Object,
 	#category : #'LibFuse-Tests-Examples'
 }
