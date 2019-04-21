@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseMkdirCallback class >> fnSpec [
-	^ #(int  (const char *, mode_t))
+	^ #(int "(*mkdir)" (String, LF_Mode_t))
 ]

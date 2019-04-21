@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseCreateCallback class >> fnSpec [
-	^ #(int  (const char *, mode_t, struct fuse_file_info *))
+	^ #(int "(*create)" (String, LF_C_Mode_t, LF_Fuse_File_Info *))
 ]

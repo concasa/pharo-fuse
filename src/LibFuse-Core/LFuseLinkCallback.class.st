@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseLinkCallback class >> fnSpec [
-	^ #(int  (const char *, const char *))
+	^ #(int "(*link)" (String, String))
 ]

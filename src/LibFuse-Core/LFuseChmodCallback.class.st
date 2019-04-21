@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseChmodCallback class >> fnSpec [
-	^ #(int  (const char *, mode_t))
+	^ #(int "(*chmod)" (String, LF_Mode_t))
 ]

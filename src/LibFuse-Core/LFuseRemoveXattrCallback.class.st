@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseRemoveXattrCallback class >> fnSpec [
-	^ #(int  (const char *, const char *))
+	^ #(int "(*removexattr)" (String, String))
 ]

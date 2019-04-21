@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseRenameCallback class >> fnSpec [
-	^ #(int  (const char *, const char *))
+	^ #(int "(*rename)" (String, String))
 ]

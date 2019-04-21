@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseReleasedirCallback class >> fnSpec [
-	^ #(int  (const char *, struct fuse_file_info *))
+	^ #(int "(*releasedir)" (String, LF_Fuse_File_Info *))
 ]

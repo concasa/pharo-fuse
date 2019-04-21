@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseAccessCallback class >> fnSpec [
-	^ #(int  (const char *, int))
+	^ #(int "(*access)" (String, int))
 ]

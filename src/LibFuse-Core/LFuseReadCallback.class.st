@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseReadCallback class >> fnSpec [
-	^ #(int  (const char *, char *, size_t, off_t, struct fuse_file_info *))
+	^ #(int "(*read)" (String, char *, size_t, LF_C_Off_t, LF_Fuse_File_Info *))
 ]

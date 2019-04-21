@@ -7,5 +7,5 @@ Class {
 { #category : #'callback spec' }
 LFuseGetDirDeprecated class >> fnSpec [
 	"Deprecated, use readdir"
-	^ #(int  (const char *, fuse_dirh_t, fuse_dirfil_t))
+	^ #(int "(*getdir)" (void*))
 ]

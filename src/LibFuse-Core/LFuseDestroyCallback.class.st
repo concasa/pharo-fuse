@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseDestroyCallback class >> fnSpec [
-	^ #(void  (void *))
+	^ #(void "(*destroy)" (void *))
 ]

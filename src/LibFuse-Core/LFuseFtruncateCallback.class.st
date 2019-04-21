@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseFtruncateCallback class >> fnSpec [
-	^ #(int  (const char *, off_t, struct fuse_file_info *))
+	^ #(int "(*ftruncate)" (String, LC_C_Off_t, LF_Fuse_File_Info *))
 ]

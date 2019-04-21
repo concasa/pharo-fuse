@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseLockCallback class >> fnSpec [
-	^ #(int  (const char *, struct fuse_file_info *, int cmd,  struct flock *))
+	^ #(int "(*lock)" (String, LF_Fuse_File_Info *, int cmd,   LF_C_Flock *))
 ]

@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseIoctlCallback class >> fnSpec [
-	^ #(int  (const char *, int cmd, void *arg, struct fuse_file_info *, unsigned int flags, void *data))
+	^ #(int "(*ioctl)" (String*, int cmd, void *arg, LF_Fuse_File_Info *, unsigned int flags, void *data))
 ]

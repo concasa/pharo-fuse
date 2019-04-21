@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseMkNodCallback class >> fnSpec [
-	^ #(int  (String, LF_C_Mode_T, dev_t))
+	^ #(int "(*mknod)" (String, LF_Mode_t, LF_Dev_t))
 ]

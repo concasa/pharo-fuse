@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseGetxattrCallback class >> fnSpec [
-	^ #(int  (const char *, const char *, char *, size_t))
+	^ #(int "(*getxattr)" (String, String, char *, size_t))
 ]
