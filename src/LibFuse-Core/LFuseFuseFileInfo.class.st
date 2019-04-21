@@ -21,7 +21,8 @@ LFuseFuseFileInfo class >> fieldsDesc [
 	'int' flags;
  	'ulong' fh_old;
  	'int' writepage;
-	"'uint' direct_io: 1;
+	" BUG: can't parse bitfields, replace with `extra_flags
+	'uint' direct_io: 1;
  	'uint' keep_cache : 1; 
  	'uint' flush : 1;
  	'uint' nonseekable : 1;

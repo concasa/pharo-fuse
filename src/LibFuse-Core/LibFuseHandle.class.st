@@ -18,11 +18,6 @@ LibFuseHandle class >> startUp: isImageStarting [
 	
 ]
 
-{ #category : #'library path' }
-LibFuseHandle >> ffiLibraryName [
-	^ LFuseFFILibrary
-]
-
 { #category : #initialization }
 LibFuseHandle >> initialize [
 	self shouldNotImplement.

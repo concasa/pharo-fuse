@@ -11,11 +11,11 @@ Class {
 LFuseFuseOperations class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
-		int (*getattr) (const char *, LF_C_Stat *);
 	)
 
 "	
 	#(
+	int (*getattr) (const char *, LF_C_Stat *);
 	int (*readlink) (const char *, char *, size_t);
 	int (*getdir) (const char *, fuse_dirh_t, fuse_dirfil_t);
 	int (*mknod) (const char *, mode_t, dev_t);

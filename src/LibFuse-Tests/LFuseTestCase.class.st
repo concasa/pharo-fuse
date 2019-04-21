@@ -1,7 +1,7 @@
 Class {
 	#name : #LFuseTestCase,
 	#superclass : #TestCase,
-	#category : #'LibFuse-Tests'
+	#category : #'LibFuse-Tests-Tests'
 }
 
 { #category : #running }

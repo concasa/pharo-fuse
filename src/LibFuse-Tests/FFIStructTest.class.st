@@ -1,8 +1,23 @@
 Class {
 	#name : #FFIStructTest,
 	#superclass : #LFuseTestCase,
-	#category : #'LibFuse-Tests'
+	#category : #'LibFuse-Tests-Tests'
 }
+
+{ #category : #'as yet unclassified' }
+FFIStructTest >> div: aNumer by: aDenom [
+	^ self ffiCall: #(Div_t div #(int aNumer, int aDenom)) module: LibC
+
+]
+
+{ #category : #tests }
+FFIStructTest >> testDiv_t [
+	| res |
+	res := self div: 30 by: 7.
+	self assert: res quot equals: 4;
+			assert: res rem equals: 2.
+	
+]
 
 { #category : #tests }
 FFIStructTest >> testLFuseFuseFileInfo [ 
