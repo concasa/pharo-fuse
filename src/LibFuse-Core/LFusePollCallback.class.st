@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFusePollCallback class >> fnSpec [
-	^ #(int  (const char *, struct fuse_file_info *, struct fuse_pollhandle *ph, unsigned *reventsp))
+	^ #(int "(*poll)" (String, LF_Fuse_File_Info *, LF_Fuse_Pollhandle *ph, unsigned *reventsp))
 ]

@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseWriteCallback class >> fnSpec [
-	^ #(int  (const char *, const char *, size_t, off_t, struct fuse_file_info *))
+	^ #(int "(*write)" (String, const char *, size_t, LF_C_Off_t, LF_Fuse_File_Info *))
 ]

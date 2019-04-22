@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseUtimeCallback class >> fnSpec [
-	^ #(int  (const char *, struct utimbuf *))
+	^ #(int "(*utime)" (String, LF_C_utimbuf*))
 ]

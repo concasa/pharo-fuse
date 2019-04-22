@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseRmdirCallback class >> fnSpec [
-	^ #(int  (const char *))
+	^ #(int "(*rmdir)" (String))
 ]

@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseGetAttrCallback class >> fnSpec [
-	^ #(int (*fgetattr) (const char *, LF_C_Stat *, LF_Fuse_File_Info *))
+	^ #(int "(*getattr)" (String, LF_C_Stat *))
 ]

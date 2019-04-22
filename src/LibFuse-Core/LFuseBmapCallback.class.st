@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseBmapCallback class >> fnSpec [
-	^ #(int  (const char *, size_t blocksize, uint64_t *idx))
+	^ #(int "(*bmap)" (String, size_t blocksize, uint64_t *idx))
 ]

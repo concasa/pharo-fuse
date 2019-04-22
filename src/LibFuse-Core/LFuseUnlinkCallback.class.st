@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseUnlinkCallback class >> fnSpec [
-	^ #(int  (const char *))
+	^ #(int "(*unlink)" (String))
 ]

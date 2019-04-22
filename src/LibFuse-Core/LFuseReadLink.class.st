@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseReadLink class >> fnSpec [
-	^ #(int  (const char *, char *, size_t))
+	^ #(int "(*readlink)" (String, String, size_t))
 ]

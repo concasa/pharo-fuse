@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseListxattrCallback class >> fnSpec [
-	^ #(int  (const char *, char *, size_t))
+	^ #(int "(*listxattr)" (String, char *, size_t))
 ]

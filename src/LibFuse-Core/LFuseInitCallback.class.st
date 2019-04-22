@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseInitCallback class >> fnSpec [
-	^ #(void * (struct fuse_conn_info *conn))
+	^ #(void *"(*init)" (LF_Fuse_Conn_Info *conn))
 ]

@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseStatfsCallback class >> fnSpec [
-	^ #(int  (const char *, struct statvfs *))
+	^ #(int "(*statfs)" (String, LF_C_Statvfs *))
 ]

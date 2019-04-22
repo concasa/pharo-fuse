@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseSymlinkCallback class >> fnSpec [
-	^ #(int  (const char *, const char *))
+	^ #(int "(*symlink)" (String, String))
 ]

@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseFsyncdirCallback class >> fnSpec [
-	^ #(int  (const char *, int, struct fuse_file_info *))
+	^ #(int "(*fsyncdir)" (String, int, LF_Fuse_File_Info *))
 ]

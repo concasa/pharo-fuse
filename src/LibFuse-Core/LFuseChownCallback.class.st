@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseChownCallback class >> fnSpec [
-	^ #(int  (const char *, uid_t, gid_t))
+	^ #(int "(*chown)" (String, LF_C_Uid_t, LF_C_Gid_t))
 ]
