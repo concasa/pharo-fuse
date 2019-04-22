@@ -20,7 +20,7 @@ BaselineOfLibFuse >> baseline: spec [
 
 			spec
 				group: 'default' 
-				with: #('LibFuse-Core' 'LibFuse-Filesystem').
+				with: #('LibFuse-Core' 'LibFuse-FileSystem').
 			spec 
 				group: 'development' with: #('default' 'LibFuse-Tests').
 		]
