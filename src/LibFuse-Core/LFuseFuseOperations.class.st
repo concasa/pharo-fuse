@@ -11,11 +11,63 @@ Class {
 LFuseFuseOperations class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
+         LFuseGetAttrCallback getattr;
+         LFuseReadLinkCallback readlink;
+         LFuseGetDirCallback getdir;
+         LFuseMkNodCallback mknod;
+         LFuseMkdirCallback mkdir;
+         LFuseUnlinkCallback unlink;
+         LFuseRmdirCallback rmdir;
+         LFuseSymlinkCallback symlink;
+         LFuseRenameCallback rename;
+         LFuseLinkCallback link;
+         LFuseChmodCallback chmod;
+         LFuseChownCallback chown;
+         LFuseTruncateCallback truncate;
+         LFuseUtimeCallback utime;
+         LFuseOpenCallback open;
+         LFuseReadCallback read;
+         LFuseWriteCallback write;
+         LFuseStatfsCallback statfs;
+         LFuseFlushCallback flush;
+         LFuseReleaseCallback release;
+         LFuseFsyncCallback fsync;
+         LFuseSetxattrCallback setxattr;
+         LFuseGetxattrCallback getxattr;
+         LFuseListxattrCallback listxattr;
+         LFuseRemoveXattrCallback removexattr;
+         LFuseOpenDirCallback opendir;
+         LFuseReaddirCallback readdir;
+         LFuseReleasedirCallback releasedir;
+         LFuseFsyncdirCallback fsyncdir;
+         LFuseInitCallback init;
+         LFuseDestroyCallback destroy;
+         LFuseAccessCallback access;
+         LFuseCreateCallback create;
+         LFuseFtruncateCallback ftruncate;
+         LFuseFgetattrCallback fgetattr;
+         LFuseLockCallback lock;
+         LFuseUtimensCallback utimens;
+         LFuseBmapCallback bmap;
+
+         unsigned int flag;
+         "
+         unsigned int flag_nullpath_ok:1;
+         unsigned int flag_nopath:1;
+         unsigned int flag_utime_omit_ok:1;
+         unsigned int flag_reserved:29;
+         "
+         LFuseIoctlCallback ioctl;
+         LFusePollCallback poll;
+         LFuseWriteBufCallback write_buf;
+         LFuseReadBufCallback read_buf;
+         LFuseFlockCallback flock;
+         LFuseFallocateCallback fallocate;
 	)
 
-"	
-	#(
-	int (*getattr) (const char *, LF_C_Stat *);
+"
+struct fuse_operations {
+	int (*getattr) (const char *, struct stat *);
 	int (*readlink) (const char *, char *, size_t);
 	int (*getdir) (const char *, fuse_dirh_t, fuse_dirfil_t);
 	int (*mknod) (const char *, mode_t, dev_t);
@@ -50,7 +102,7 @@ LFuseFuseOperations class >> fieldsDesc [
 	int (*create) (const char *, mode_t, struct fuse_file_info *);
 	int (*ftruncate) (const char *, off_t, struct fuse_file_info *);
 	int (*fgetattr) (const char *, struct stat *, struct fuse_file_info *);
-	int (*lock) (const char *, struct fuse_file_info *, int cmd,  struct flock *);
+	int (*lock) (const char *, struct fuse_file_info *, int cmd,   struct flock *);
 	int (*utimens) (const char *, const struct timespec tv[2]);
 	int (*bmap) (const char *, size_t blocksize, uint64_t *idx);
 	unsigned int flag_nullpath_ok:1;
@@ -59,11 +111,10 @@ LFuseFuseOperations class >> fieldsDesc [
 	unsigned int flag_reserved:29;
 	int (*ioctl) (const char *, int cmd, void *arg, struct fuse_file_info *, unsigned int flags, void *data);
 	int (*poll) (const char *, struct fuse_file_info *, struct fuse_pollhandle *ph, unsigned *reventsp);
-	int (*write_buf) (const char *, struct fuse_bufvec *buf, off_t off,  struct fuse_file_info *);
+	int (*write_buf) (const char *, struct fuse_bufvec *buf, off_t off, struct fuse_file_info *);
 	int (*read_buf) (const char *, struct fuse_bufvec **bufp, size_t size, off_t off, struct fuse_file_info *);
 	int (*flock) (const char *, struct fuse_file_info *, int op);
 	int (*fallocate) (const char *, int, off_t, off_t, struct fuse_file_info *);
-	)
-	
+}
 "
 ]
