@@ -1,10 +1,10 @@
 Class {
-	#name : #LFuseReadLink,
+	#name : #LFuseReadLinkCallback,
 	#superclass : #LFuseCallback,
 	#category : #'LibFuse-Core-FFI-Callbacks'
 }
 
 { #category : #'callback spec' }
-LFuseReadLink class >> fnSpec [
+LFuseReadLinkCallback class >> fnSpec [
 	^ #(int "(*readlink)" (String, String, size_t))
 ]
