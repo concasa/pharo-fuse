@@ -1,11 +1,11 @@
 Class {
-	#name : #LFuseGetDirDeprecated,
+	#name : #LFuseGetDirCallback,
 	#superclass : #LFuseCallback,
 	#category : #'LibFuse-Core-FFI-Callbacks'
 }
 
 { #category : #'callback spec' }
-LFuseGetDirDeprecated class >> fnSpec [
+LFuseGetDirCallback class >> fnSpec [
 	"Deprecated, use readdir"
 	^ #(int "(*getdir)" (void*))
 ]
