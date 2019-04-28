@@ -6,5 +6,5 @@ Class {
 
 { #category : #'callback spec' }
 LFuseOpenCallback class >> fnSpec [
-	^ #(int "(*open)" (String, LF_Fuse_File_Info *)))
+	^ #(int "(*open)" (String, LF_Fuse_File_Info *))
 ]
